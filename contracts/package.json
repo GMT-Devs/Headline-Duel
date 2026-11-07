@@ -1,0 +1,15 @@
+{
+  "name": "headline-duel-contracts",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network bohr",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network botchain"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.17",
+    "solc": "0.8.24"
+  }
+}
