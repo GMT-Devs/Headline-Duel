@@ -1,0 +1,18 @@
+# Shared Week 1 Worker — add these routes to it, or deploy standalone.
+name = "headline-duel-worker"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+# No request logging: observability off by default.
+[observability]
+enabled = false
+
+[vars]
+# Comma-separated list of origins allowed to call the Worker.
+ALLOWED_ORIGINS = "https://headlineduel.xyz,https://gmt-devs.github.io,http://localhost:8080"
+IPFS_GATEWAY = "https://ipfs.io/ipfs/"
+
+# Secrets (never commit):
+#   wrangler secret put ANTHROPIC_API_KEY
+#   wrangler secret put PINATA_JWT
